@@ -69,3 +69,9 @@ calculate_fibonacci:
 exit:
     li $v0, 10               # Exit program
     syscall
+
+illegal_input:
+    # Print error message
+    li $v0, 4
+    la $a0, error_msg
+    syscall
