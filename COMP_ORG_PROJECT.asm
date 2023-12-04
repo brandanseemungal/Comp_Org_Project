@@ -61,3 +61,11 @@ calculate_fibonacci:
     move $t2, $t3            # Shift values for next iteration
     move $t3, $t5
     addi $t4, $t4, 1         # Increment counter
+
+
+    # Check if counter reached N
+    bne $t4, $t0, calculate_fibonacci
+
+exit:
+    li $v0, 10               # Exit program
+    syscall
