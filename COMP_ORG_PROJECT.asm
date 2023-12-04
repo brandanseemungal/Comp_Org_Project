@@ -16,3 +16,9 @@ main:
     syscall
     move $t0, $v0           # Save input in $t0
 
+
+    # Check if input is legal
+check_input:
+    blez $t0, illegal_input # Check if N <= 0
+    li $t1, 25              # Load 25 to $t1
+    blt $t0, $t1, illegal_input # Check if N < 25
