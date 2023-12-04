@@ -70,8 +70,7 @@ exit:
     li $v0, 10               # Exit program
     syscall
 
-illegal_input:
-    # Print error message
+    # Prompt user for input again
     li $v0, 4
-    la $a0, error_msg
+    la $a0, prompt
     syscall
