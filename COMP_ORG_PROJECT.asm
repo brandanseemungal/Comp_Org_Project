@@ -74,3 +74,9 @@ exit:
     li $v0, 4
     la $a0, prompt
     syscall
+
+    # Read user input again (N)
+    li $v0, 5
+    syscall
+    move $t0, $v0            # Save new input in $t0
+    j check_input             # Check if new input is legal
