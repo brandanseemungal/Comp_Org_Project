@@ -34,6 +34,13 @@ check_input:
     la $a0, fib_msg
     syscall
 
+    # Print Fibonacci sequence header
+    li $v0, 4               
+    la $a0, fib_msg
+    syscall
 
-    
-
+calculate_fibonacci:
+    # Print Fibonacci number
+    move $a0, $t2            # Load Fibonacci number to print
+    li $v0, 1                # System call to print integer
+    syscall
