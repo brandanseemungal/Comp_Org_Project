@@ -28,5 +28,12 @@ check_input:
     li $t2, 0               # Initialize first Fibonacci number
     li $t3, 1               # Initialize second Fibonacci number
     li $t4, 0               # Initialize counter
+
+    # Print Fibonacci sequence header
+    li $v0, 4               
+    la $a0, fib_msg
+    syscall
+
+
     
 
