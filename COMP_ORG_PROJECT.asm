@@ -12,3 +12,7 @@ main:
     la $a0, prompt
     syscall
     
+    li $v0, 5               # Read user input (N)
+    syscall
+    move $t0, $v0           # Save input in $t0
+
